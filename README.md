@@ -1,8 +1,9 @@
 # Plex Neue
 Skin for Plex Home Theater
 
-This is a first alpha release. Many things havent been styled yet.
+This is a first alpha release. Many things haven't been styled yet.
 Feel free!
+
 
 ###For testing just put the skin.plexneue Folder here.
 
