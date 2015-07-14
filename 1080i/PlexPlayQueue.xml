@@ -30,7 +30,7 @@
 				</control>
 				<!-- overlay -->
 				<control type="image">
-					<width>1280</width>
+					<width>1920</width>
 					<height>720</height>
 					<texture>bg-overlay-grainy.png</texture>
 					<aspectratio>stretch</aspectratio>
@@ -934,7 +934,7 @@
 						</control>
 						<!-- overlay -->
 						<control type="image">
-							<width>1280</width>
+							<width>1920</width>
 							<height>720</height>
 							<texture>bg-overlay-grainy.png</texture>
 							<aspectratio>stretch</aspectratio>

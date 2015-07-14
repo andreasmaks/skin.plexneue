@@ -12,28 +12,29 @@
 				<viewtype label="LibraryPostersBigger">panel</viewtype>
 				<onup>51</onup>
 				<ondown>51</ondown>
-				<onright>Container.NextViewMode</onright>
+				<!--<onright>998</onright>-->
 				<onleft>998</onleft>
 				<orientation>vertical</orientation>
-				<posx>102</posx>
-				<posy>28</posy>
-				<width>1200</width>
-				<height>670</height>
-				<itemlayout width="234" height="335">
+				<posx>157</posx>
+				<posy>2</posy>
+				<width>1800</width>
+				<height>1080</height>
+				<itemlayout width="410" height="520">
 					<include>MovieTVPosterMiddle</include>
 					<control type="label">
 						<include>MovieTVPosterMiddleTitle</include>
+						<textcolor>FF999999</textcolor>
 					</control>
 					<include>MovieTVPosterMiddleUnwatchedOverlay</include>
 				</itemlayout>
-				<focusedlayout width="234" height="335">
+				<focusedlayout width="410" height="520">
 					<include>MovieTVPosterMiddle</include>
 					<control type="label">
 						<include>MovieTVPosterMiddleTitle</include>
-						<textcolor>orangeLight</textcolor>
+						<textcolor>white</textcolor>
 					</control>
 					<include>MovieTVPosterMiddleUnwatchedOverlay</include>
-					<include>MovieTVPosterMiddleSelectedBorder</include>
+					<!--<include>MovieTVPosterMiddleSelectedBorder</include>-->
 				</focusedlayout>
 			</control>
 		</control>
@@ -205,7 +206,7 @@
 				<orientation>vertical</orientation>
 				<posx>100</posx>
 				<posy>27</posy>
-				<width>1280</width>
+				<width>1920</width>
 				<height>665</height>
 				<itemlayout width="285" height="165">
 					<include>EpisodeThumbCardFiltered</include>

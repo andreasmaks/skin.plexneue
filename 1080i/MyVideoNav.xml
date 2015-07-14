@@ -16,10 +16,10 @@
 		<!-- views (Views.xml & ViewsMovieTV.xml & ViewsChannels.xml & ViewsPreplay.xml & ViewsClips.xml) -->
 		<!-- ByFolder ID 40 -->
 		<include>ByFolder</include>
-		<!-- LibraryPosters ID 50 -->
-		<include condition="!Skin.HasSetting(ShowBigPostersLibraryView)">LibraryPosters</include>
+		<!--&lt;!&ndash; LibraryPosters ID 50 &ndash;&gt;-->
+		<!--<include condition="Skin.HasSetting(ShowBigPostersLibraryView)">LibraryPosters</include>-->
 		<!-- LibraryPostersBigger ID 51 -->
-		<include condition="Skin.HasSetting(ShowBigPostersLibraryView)">LibraryPostersBigger</include>
+		<include condition="!Skin.HasSetting(ShowBigPostersLibraryView)">LibraryPostersBigger</include>
 		<!-- Clips ID 80 -->
 		<include>ClipThumbs</include>
 		<!-- PreplayShow ID 60 -->

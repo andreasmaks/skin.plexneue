@@ -52,7 +52,7 @@
 		<texturefocus border="5">black-bottom-grey.png</texturefocus>
 		<texturenofocus border="5">border-bottom-grey.png</texturenofocus>
 		<textureradiofocus>b-radio-on.png</textureradiofocus>
-		<textureradionofocus>b-radio-off.png</textureradionofocus>
+		<!--<textureradionofocus>b-radio-off.png</textureradionofocus>-->
 		<radiowidth>27</radiowidth>
 		<radioheight>27</radioheight>
 		<pulseonselect>false</pulseonselect>
@@ -96,14 +96,12 @@
 		<height>190</height>
 		<align>left</align>
 		<aligny>top</aligny>
-		<font>Regular-17</font>
+		<font>Light-25</font>
 		<textcolor>white</textcolor>
-		<shadowcolor>ff222222</shadowcolor>
 		<textureup>-</textureup>
 		<textureupfocus>-</textureupfocus>
 		<texturedown>-</texturedown>
 		<texturedownfocus>-</texturedownfocus>
-		<autoscroll delay="10000" time="3000" repeat="10000">true</autoscroll>
 	</default>
 	<default type="progress">
 		<description>Default Progress Bar</description>

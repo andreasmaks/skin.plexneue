@@ -9,7 +9,7 @@
 			<include>BeginnersBackground</include>
 			<include>SlideshowDimmed</include>
 			<control type="image">
-				<width>1280</width>
+				<width>1920</width>
 				<height>100</height>
 				<include>Black</include>
 				<animation effect="fade" start="0" end="20" time="0" condition="true">Conditional</animation>

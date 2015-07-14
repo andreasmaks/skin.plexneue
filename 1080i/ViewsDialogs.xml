@@ -11,8 +11,8 @@
 		<animation effect="fade" start="100" end="0" time="0">WindowClose</animation>
 	</include>
 	<include name="DialogBG">
-		<include>BlackRounded</include>
-		<animation effect="fade" start="0" end="80" time="0" condition="true">Conditional</animation>
+		<include>Black</include>
+		<animation effect="fade" start="0" end="90" time="0" condition="true">Conditional</animation>
 	</include>
 	<include name="DialogBGContextMenu">
 		<texture border="30">bg-dialog-context-menu.png</texture>
@@ -207,8 +207,8 @@
 					<texture>bg-overlay-grainy.png</texture>
 				</control>
 				<control type="image">
-					<posy>50</posy>					
-					<width>1280</width>
+					<posy>50</posy>
+					<width>1920</width>
 					<height>620</height>
 					<aspectratio aligny="top">keep</aspectratio>
 					<texture>plex-chevron-alone-big.png</texture>
@@ -365,7 +365,7 @@
 								<selectedcolor>Unfocused</selectedcolor>
 								<textoffsetx>140</textoffsetx>
 								<visible>IsEmpty(ListItem.Property(managed)) + IsEmpty(ListItem.Property(protected))</visible>
-							</control>							
+							</control>
 							<control type="label">
 								<posx>0</posx>
 								<posy>62</posy>
@@ -469,7 +469,7 @@
 						<scrolltime>200</scrolltime>
 						<texturefocus>-</texturefocus>
 						<itemlayout height="110">
-							
+
 						</itemlayout>
 						<focusedlayout height="110">
 							<include>DialogUserAvatarBg</include>
@@ -523,7 +523,7 @@
 								<selectedcolor>Unfocused</selectedcolor>
 								<textoffsetx>140</textoffsetx>
 								<visible>IsEmpty(ListItem.Property(managed)) + IsEmpty(ListItem.Property(protected))</visible>
-							</control>							
+							</control>
 							<control type="label">
 								<posx>0</posx>
 								<posy>62</posy>
@@ -668,65 +668,37 @@
 	</include>
 	<include name="DialogSelectAudioSubtitleStreamPicker">
 		<control type="group">
-			<posx>96</posx>
-			<posy>28</posy>
+			<posx>120</posx>
+			<posy>60</posy>
 			<!-- bg's -->
 			<control type="group">
 				<control type="image">
-					<posx>-1</posx>
+					<posx>1</posx>
 					<posy>-1</posy>
-					<width>502</width>
-					<height>342</height>
-					<texture>transparent.png</texture>
-					<bordertexture border="10">border-black.png</bordertexture>
+					<width>400</width>
+					<height>205</height>
+					<texture>black.png</texture>
 					<bordersize>1</bordersize>
-					<animation effect="fade" start="0" end="100" time="300">WindowOpen</animation>
-				</control>
-				<control type="image">
-					<posy>80</posy>
-					<width>500</width>
-					<height>260</height>
-					<texture border="10">base-rounded-half.png</texture>
-					<colordiffuse>FF000000</colordiffuse>
-					<animation effect="fade" start="0" end="80" time="0" condition="true">Conditional</animation>
-				</control>
-				<!-- title bg -->
-				<control type="image">
-					<width>500</width>
-					<height>80</height>
-					<texture border="10" flipy="true">base-rounded-half.png</texture>
-					<colordiffuse>FF111111</colordiffuse>
-				</control>
-				<control type="image">
-					<posy>30</posy>
-					<width>500</width>
-					<height>50</height>
-					<texture>border-bottom-grey.png</texture>
-				</control>
-				<!-- arrow left -->
-				<control type="image">
-					<description>Dialog arrow</description>
-					<posx>-14</posx>
-					<posy>65</posy>
-					<include>ArrowBlackLeft</include>
+					<animation effect="fade" start="0" end="90" time="300">WindowOpen</animation>
 				</control>
 			</control>
 			<control type="group">
 				<posy>20</posy>
+				<posx>10</posx>
 				<control type="label" id="1">
 					<label>[UPPERCASE]$LOCALIZE[33063][/UPPERCASE]</label>
-					<width>480</width>
+					<width>400</width>
 					<height>40</height>
-					<align>center</align>
-					<font>Regular-24</font>
-					<textcolor>Focused</textcolor>
+					<align>left</align>
+					<font>Light-30</font>
+					<textcolor>orange</textcolor>
+					<textoffsetx>20</textoffsetx>
 				</control>
 				<control type="group">
-					<posy>90</posy>
-					<posx>20</posx>
+					<posy>60</posy>
 					<control type="list" id="3">
-						<width>460</width>
-						<height>206</height>
+						<width>400</width>
+						<height>105</height>
 						<onleft>-</onleft>
 						<onright>-</onright>
 						<onup>3</onup>
@@ -734,45 +706,26 @@
 						<pagecontrol>61</pagecontrol>
 						<scrolltime>200</scrolltime>
 						<itemlayout height="50">
-							<control type="image">
-								<posx>0</posx>
-								<posy>0</posy>
-								<width>460</width>
-								<height>50</height>
-								<texture border="5">border-bottom-grey.png</texture>
-							</control>
 							<control type="label">
-								<width>460</width>
+								<width>400</width>
 								<height>50</height>
 								<info>ListItem.Label</info>
 								<textcolor>Unfocused</textcolor>
 								<textoffsetx>20</textoffsetx>
+								<font>Light-25</font>
 							</control>
 						</itemlayout>
 						<focusedlayout height="50">
-							<control type="image">
-								<posx>0</posx>
-								<posy>0</posy>
-								<width>460</width>
-								<height>50</height>
-								<texture border="5">black-bottom-grey.png</texture>
-							</control>
 							<control type="label">
-								<width>460</width>
+								<width>400</width>
 								<height>50</height>
 								<info>ListItem.Label</info>
-								<textcolor>Focused</textcolor>
+								<textcolor>orange</textcolor>
 								<textoffsetx>20</textoffsetx>
+								<font>Light-25</font>
+
 							</control>
 						</focusedlayout>
-					</control>
-					<control type="scrollbar" id="61">
-						<description>Scroll Bar</description>
-						<posx>461</posx>
-						<posy>-10</posy>
-						<width>20</width>
-						<height>220</height>
-						<showonepage>true</showonepage>
 					</control>
 				</control>
 			</control>
@@ -878,31 +831,31 @@
 			<control type="group" id="1400">
 				<posy>44</posy>
 				<control type="grouplist">
-					<posy>-9</posy>
-					<posx>10</posx>
-					<align>right</align>
+					<posy>46</posy>
+					<posx>70</posx>
+					<align>left</align>
 					<height>30</height>
-					<width>220</width>
+					<width>300</width>
 					<orientation>horizontal</orientation>
 					<itemgap>10</itemgap>
 					<control type="label" id="19029">
 						<height>30</height>
 						<description>Heading</description>
-						<width min="29" max="220">auto</width>
-						<font>Regular-24</font>
+						<width min="29" max="370">auto</width>
+						<font>Light-30</font>
 						<textcolor>white</textcolor>
 					</control>
 				</control>
 				<control type="grouplist" id="19020">
-					<width>230</width>
-					<height>620</height>
-					<posy>38</posy>
-					<posx>6</posx>
+					<width>300</width>
+					<height>840</height>
+					<posy>109</posy>
+					<posx>70</posx>
 					<onup>19020</onup>
 					<ondown>19020</ondown>
 					<onleft>19000</onleft>
 					<onright>Dialog.Close(10202)</onright>
-					<itemgap>5</itemgap>
+					<itemgap>0</itemgap>
 					<pagecontrol>61</pagecontrol>
 					<scrolltime>200</scrolltime>
 				</control>
@@ -911,17 +864,17 @@
 					<include>leftSubMenuRadioButton</include>
 				</control>
 				<!-- Used for Clear Filters -->
-				<control type="button" id="19022">
-					<include>leftSubMenuClearFilters</include>
-				</control>
-				<control type="scrollbar" id="61">
-					<description>Scroll Bar</description>
-					<posx>227</posx>
-					<posy>33</posy>
-					<width>20</width>
-					<height>568</height>
-					<showonepage>true</showonepage>
-				</control>
+				<!--<control type="button" id="19022">-->
+					<!--<include>leftSubMenuClearFilters</include>-->
+				<!--</control>-->
+				<!--<control type="scrollbar" id="61">-->
+					<!--<description>Scroll Bar</description>-->
+					<!--<posx>227</posx>-->
+					<!--<posy>33</posy>-->
+					<!--<width>20</width>-->
+					<!--<height>568</height>-->
+					<!--<showonepage>true</showonepage>-->
+				<!--</control>-->
 			</control>
 		</control>
 	</include>
@@ -1339,64 +1292,34 @@
 	</include>
 	<!-- DialogMyPlexLogin.xml -->
 	<include name="DialogMyPlexLogin">
-		
 	</include>
 	<!-- -->
 	<!-- DialogRating.xml -->
 	<include name="DialogRating">
 		<control type="group">
-			<posx>96</posx>
-			<posy>166</posy>
+			<posx>120</posx>
+			<posy>270</posy>
 			<!-- bg's -->
 			<control type="group">
 				<control type="image">
 					<posx>-1</posx>
 					<posy>-1</posy>
-					<width>302</width>
+					<width>340</width>
 					<height>162</height>
-					<texture>transparent.png</texture>
-					<bordertexture border="10">border-black.png</bordertexture>
+					<texture>black.png</texture>
 					<bordersize>1</bordersize>
-					<animation effect="fade" start="0" end="100" time="300">WindowOpen</animation>
-				</control>
-				<control type="image">
-					<posy>80</posy>
-					<width>300</width>
-					<height>80</height>
-					<texture border="10">base-rounded-half.png</texture>
-					<colordiffuse>FF000000</colordiffuse>
-					<animation effect="fade" start="0" end="80" time="0" condition="true">Conditional</animation>
-				</control>
-				<!-- title bg -->
-				<control type="image">
-					<width>300</width>
-					<height>80</height>
-					<texture border="10" flipy="true">base-rounded-half.png</texture>
-					<colordiffuse>FF111111</colordiffuse>
-				</control>
-				<control type="image">
-					<posy>30</posy>
-					<width>300</width>
-					<height>50</height>
-					<texture>border-bottom-grey.png</texture>
-				</control>
-				<!-- arrow left -->
-				<control type="image">
-					<description>Dialog arrow</description>
-					<posx>-14</posx>
-					<posy>70</posy>
-					<include>ArrowBlackLeft</include>
+					<animation effect="fade" start="0" end="90" time="300">WindowOpen</animation>
 				</control>
 			</control>
 			<control type="group">
 				<posy>20</posy>
 				<control type="label" id="1">
 					<label>[UPPERCASE]$LOCALIZE[32100][/UPPERCASE]</label>
-					<width>300</width>
+					<width>338</width>
 					<height>40</height>
 					<align>center</align>
-					<font>Regular-24</font>
-					<textcolor>Focused</textcolor>
+					<font>Light-30</font>
+					<textcolor>orange</textcolor>
 				</control>
 			</control>
 		</control>
@@ -1404,43 +1327,45 @@
 	<!-- DialogBusy.xml -->
 	<include name="DialogBusy">
 		<control type="group">
-			<posx>960</posx>
-			<posy>630</posy>
+			<posx>1436</posx>
+			<posy>976</posy>
 			<control type="group">
 				<control type="image">
 					<description>Background</description>
-					<width>250</width>
-					<height>60</height>
+					<width>277</width>
+					<height>104</height>
 					<include>DialogBG</include>
 				</control>
-				<control type="image">
-					<description>Background border</description>
-					<width>252</width>
-					<height>62</height>
-					<include>DialogBorder</include>
-				</control>
-				<control type="image">
-					<description>Dialog arrow</description>
-					<posx>105</posx>
-					<posy>60</posy>
-					<include>DialogArrow</include>
-				</control>
+				<!--<control type="image">-->
+					<!--<description>Background border</description>-->
+					<!--<width>252</width>-->
+					<!--<height>62</height>-->
+					<!--<include>DialogBorder</include>-->
+				<!--</control>-->
+				<!--<control type="image">-->
+					<!--<description>Dialog arrow</description>-->
+					<!--<posx>105</posx>-->
+					<!--<posy>60</posy>-->
+					<!--<include>DialogArrow</include>-->
+				<!--</control>-->
 			</control>
 			<control type="group">
 				<visible>Control.IsVisible(10)</visible>
 				<control type="label">
 					<description>"Please wait..." label</description>
 					<posx>10</posx>
-					<width>230</width>
+					<width>277</width>
 					<height>35</height>
+					<font>Light-30</font>
 					<align>center</align>
 					<label>$LOCALIZE[20186]...</label>
+					<textcolor>orange</textcolor>
 				</control>
 				<control type="progress" id="10">
 					<description>Progressbar</description>
 					<posx>10</posx>
 					<posy>32</posy>
-					<width>230</width>
+					<width>277</width>
 				</control>
 			</control>
 			<control type="group">
@@ -1448,10 +1373,12 @@
 				<control type="label">
 					<description>"Please wait..." label</description>
 					<posx>10</posx>
-					<width>230</width>
-					<height>60</height>
+					<width>278</width>
+					<height>99</height>
+					<font>Light-30</font>
 					<align>center</align>
 					<label>$LOCALIZE[20186]...</label>
+					<textcolor>orange</textcolor>
 				</control>
 			</control>
 		</control>
@@ -1746,7 +1673,7 @@
 			<!-- text field bg -->
 			<control type="grouplist">
 				<posy>170</posy>
-				<width>1280</width>
+				<width>1920</width>
 				<height>50</height>
 				<align>center</align>
 				<aligny>center</aligny>
@@ -1755,14 +1682,14 @@
 			</control>
 			<control type="grouplist">
 				<itemgap>5</itemgap>
-				<width>1280</width>
+				<width>1920</width>
 				<height>720</height>
 				<align>center</align>
 				<aligny>center</aligny>
 				<orientation>vertical</orientation>
 				<!-- Row 0 -->
 				<control type="grouplist">
-					<width>1280</width>
+					<width>1920</width>
 					<height>75</height>
 					<align>center</align>
 					<aligny>center</aligny>
@@ -1777,7 +1704,7 @@
 				<!-- Row 1 -->
 				<control type="grouplist" id="501">
 					<itemgap>5</itemgap>
-					<width>1280</width>
+					<width>1920</width>
 					<height>50</height>
 					<align>center</align>
 					<aligny>center</aligny>
@@ -1866,7 +1793,7 @@
 				<!-- Row 2 -->
 				<control type="grouplist" id="502">
 					<itemgap>5</itemgap>
-					<width>1280</width>
+					<width>1920</width>
 					<height>50</height>
 					<align>center</align>
 					<aligny>center</aligny>
@@ -1955,7 +1882,7 @@
 				<!-- Row 3 -->
 				<control type="grouplist" id="503">
 					<itemgap>5</itemgap>
-					<width>1280</width>
+					<width>1920</width>
 					<height>50</height>
 					<align>center</align>
 					<aligny>center</aligny>
@@ -2044,7 +1971,7 @@
 				<!-- Row 4 -->
 				<control type="grouplist" id="504">
 					<itemgap>5</itemgap>
-					<width>1280</width>
+					<width>1920</width>
 					<height>50</height>
 					<align>center</align>
 					<aligny>center</aligny>
@@ -2141,7 +2068,7 @@
 				<!-- Row 5 -->
 				<control type="grouplist" id="505">
 					<itemgap>5</itemgap>
-					<width>1280</width>
+					<width>1920</width>
 					<height>60</height>
 					<align>center</align>
 					<aligny>center</aligny>
@@ -2180,7 +2107,7 @@
 				<!-- Row 6 -->
 				<control type="grouplist" id="506">
 					<itemgap>5</itemgap>
-					<width>1280</width>
+					<width>1920</width>
 					<height>50</height>
 					<align>center</align>
 					<aligny>center</aligny>
@@ -2210,7 +2137,7 @@
 			<!-- text field bg -->
 			<control type="grouplist">
 				<posy>170</posy>
-				<width>1280</width>
+				<width>1920</width>
 				<height>50</height>
 				<align>center</align>
 				<aligny>center</aligny>
@@ -2219,14 +2146,14 @@
 			</control>
 			<control type="grouplist">
 				<itemgap>5</itemgap>
-				<width>1280</width>
+				<width>1920</width>
 				<height>720</height>
 				<align>center</align>
 				<aligny>center</aligny>
 				<orientation>vertical</orientation>
 				<!-- Row 0 -->
 				<control type="grouplist">
-					<width>1280</width>
+					<width>1920</width>
 					<height>75</height>
 					<align>center</align>
 					<aligny>center</aligny>
@@ -2246,7 +2173,7 @@
 				<!-- Row 1 -->
 				<control type="grouplist" id="501">
 					<itemgap>5</itemgap>
-					<width>1280</width>
+					<width>1920</width>
 					<height>50</height>
 					<align>center</align>
 					<aligny>center</aligny>
@@ -2345,7 +2272,7 @@
 				<!-- Row 2 -->
 				<control type="grouplist">
 					<itemgap>5</itemgap>
-					<width>1280</width>
+					<width>1920</width>
 					<height>50</height>
 					<align>center</align>
 					<aligny>center</aligny>
@@ -2444,7 +2371,7 @@
 				<!-- Row 3 -->
 				<control type="grouplist">
 					<itemgap>5</itemgap>
-					<width>1280</width>
+					<width>1920</width>
 					<height>50</height>
 					<align>center</align>
 					<aligny>center</aligny>
@@ -2543,7 +2470,7 @@
 				<!-- Row 4 -->
 				<control type="grouplist" id="504">
 					<itemgap>5</itemgap>
-					<width>1280</width>
+					<width>1920</width>
 					<height>50</height>
 					<align>center</align>
 					<aligny>center</aligny>
@@ -2650,7 +2577,7 @@
 				<!-- Row 5 -->
 				<control type="grouplist" id="505">
 					<itemgap>5</itemgap>
-					<width>1280</width>
+					<width>1920</width>
 					<height>50</height>
 					<align>center</align>
 					<aligny>center</aligny>
@@ -2693,7 +2620,7 @@
 				<!-- Row 6 -->
 				<control type="grouplist" id="506">
 					<itemgap>5</itemgap>
-					<width>1280</width>
+					<width>1920</width>
 					<height>50</height>
 					<align>center</align>
 					<aligny>center</aligny>
@@ -2722,10 +2649,10 @@
 				<control type="image">
 					<include>FullScreenScaled</include>
 					<texture>bg-overlay-grainy.png</texture>
-				</control>				
+				</control>
 				<control type="image">
-					<posy>50</posy>					
-					<width>1280</width>
+					<posy>50</posy>
+					<width>1920</width>
 					<height>620</height>
 					<aspectratio aligny="top">keep</aspectratio>
 					<texture>plex-chevron-alone-big.png</texture>
@@ -2737,7 +2664,7 @@
 			<control type="label" id="1">
 				<posy>147</posy>
 				<label>Please enter your PIN</label>
-				<width>1280</width>
+				<width>1920</width>
 				<height>40</height>
 				<align>center</align>
 				<font>Regular-24</font>
@@ -2746,7 +2673,7 @@
 			<!-- text field bg -->
 			<control type="grouplist">
 				<posy>224</posy>
-				<width>1280</width>
+				<width>1920</width>
 				<height>105</height>
 				<align>center</align>
 				<aligny>center</aligny>
@@ -2759,14 +2686,14 @@
 			</control>
 			<control type="grouplist">
 				<itemgap>5</itemgap>
-				<width>1280</width>
+				<width>1920</width>
 				<height>720</height>
 				<align>center</align>
 				<aligny>center</aligny>
 				<orientation>vertical</orientation>
 				<!-- Row 0 -->
 				<control type="grouplist">
-					<width>1280</width>
+					<width>1920</width>
 					<height>105</height>
 					<align>center</align>
 					<aligny>center</aligny>
@@ -2786,7 +2713,7 @@
 				<!-- Row 1 -->
 				<control type="grouplist" id="501">
 					<itemgap>5</itemgap>
-					<width>1280</width>
+					<width>1920</width>
 					<height>50</height>
 					<align>center</align>
 					<aligny>center</aligny>
@@ -2840,7 +2767,7 @@
 				<!-- Row 2 -->
 				<control type="grouplist" id="502">
 					<itemgap>5</itemgap>
-					<width>1280</width>
+					<width>1920</width>
 					<height>50</height>
 					<align>center</align>
 					<aligny>center</aligny>
@@ -2894,7 +2821,7 @@
 				<!-- Row 3 -->
 				<control type="grouplist" id="503">
 					<itemgap>5</itemgap>
-					<width>1280</width>
+					<width>1920</width>
 					<height>50</height>
 					<align>center</align>
 					<aligny>center</aligny>

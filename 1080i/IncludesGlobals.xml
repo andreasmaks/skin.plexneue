@@ -20,6 +20,10 @@
 		<include>Base</include>
 		<colordiffuse>FF000000</colordiffuse>
 	</include>
+	<include name="Blackmenu">
+		<include>Base</include>
+		<colordiffuse>CC000000</colordiffuse>
+	</include>
 	<include name="Orange">
 		<include>Base</include>
 		<colordiffuse>orange</colordiffuse>
@@ -57,13 +61,25 @@
 		<aspectratio scalediffuse="true" align="center">stretch</aspectratio>
 		<texture background="true" border="50">shadow.png</texture>
 	</include>
+	<include name="ShadowBig">
+		<posx>40</posx>
+		<posy>40</posy>
+		<aspectratio scalediffuse="true" align="center">stretch</aspectratio>
+		<texture background="true" border="50">shadowbig.png</texture>
+	</include>
+	<include name="Shadowextras">
+		<posx>40</posx>
+		<posy>40</posy>
+		<aspectratio scalediffuse="true" align="center">stretch</aspectratio>
+		<texture background="true" border="50">shadowextras.png</texture>
+	</include>
 	<include name="Border">
 		<!-- BORDER: add 6px in width and height when applied -->
-		<posx>10</posx>
-		<posy>10</posy>
+		<posx>49</posx>
+		<posy>40</posy>
 		<texture>transparent.png</texture>
 		<bordertexture border="10">border.png</bordertexture>
-		<bordersize>3</bordersize>
+		<bordersize>1</bordersize>
 	</include>
 	<include name="BorderBlack">
 		<posx>10</posx>
@@ -95,15 +111,15 @@
 	<include name="FullScreenScaled">
 		<posx>0</posx>
 		<posy>0</posy>
-		<width>1280</width>
-		<height>720</height>
+		<width>1920</width>
+		<height>1080</height>
 		<aspectratio>scale</aspectratio>
 	</include>
 	<include name="FullScreenStretched">
 		<posx>0</posx>
 		<posy>0</posy>
-		<width>1280</width>
-		<height>720</height>
+		<width>1920</width>
+		<height>1080</height>
 		<aspectratio>stretch</aspectratio>
 	</include>
 	<include name="Grid">
@@ -116,10 +132,10 @@
 	</include>
 	<include name="Non16x9Cache">		
 		<control type="image">
-			<posy>720</posy>
+			<posy>1080</posy>
 			<posx>0</posx>
-			<width>1280</width>
-			<height>720</height>
+			<width>1920</width>
+			<height>1080</height>
 			<texture>black.png</texture>
 		</control>
 	</include>
@@ -220,45 +236,42 @@
 	<!-- Middle size posters -->
 	<include name="MovieTVPosterMiddle">
 		<control type="image">
-			<posx>0</posx>
-			<posy>0</posy>
-			<width>208</width>
-			<height>300</height>
+			<posx>22</posx>
+			<posy>12</posy>
+			<width>332</width>
+			<height>470</height>
 			<include>Shadow</include>
 		</control>
 		<control type="image">
-			<posx>13</posx>
-			<posy>13</posy>
-			<width>185</width>
-			<height>274</height>
+			<posx>50</posx>
+			<posy>40</posy>
+			<width>276</width>
+			<height>414</height>
 			<texture background="true">default-poster-middle.png</texture>
 		</control>
 		<control type="image">
-			<posx>13</posx>
-			<posy>13</posy>
-			<width>185</width>
-			<height>274</height>
-			<texture background="true" diffuse="mask-poster-middle.png">$INFO[ListItem.Art(thumb)]</texture>
+			<posx>50</posx>
+			<posy>40</posy>
+			<width>276</width>
+			<height>414</height>
+			<texture background="true" >$INFO[ListItem.Art(thumb)]</texture>
 			<aspectratio scalediffuse="false" align="center" aligny="top">scale</aspectratio>
 		</control>
 	</include>
 	<include name="MovieTVPosterMiddleSelectedBorder">
 		<control type="image">
-			<width>192</width>
-			<height>281</height>
+			<width>277</width>
+			<height>414</height>
 			<include>Border</include>
 		</control>
 	</include>
 	<include name="MovieTVPosterMiddleTitle">
-		<posy>298</posy>
-		<posx>105</posx>
-		<width>180</width>
-		<height>30</height>
+		<posy>503</posy>
+		<posx>187</posx>
+		<width>274</width>
 		<align>center</align>
-		<aligny>center</aligny>
 		<label>$INFO[ListItem.Label]</label>
-		<font>Regular-17</font>
-		<shadowcolor>FF222222</shadowcolor>
+		<font>Light-30</font>
 	</include>
 	<include name="MovieTVPosterMiddleUnwatchedOverlay">
 		<control type="group">
@@ -282,8 +295,8 @@
 		</control>
 		<control type="group">
 			<control type="image">
-				<posx>167</posx>
-				<posy>256</posy>
+				<posx>60</posx>
+				<posy>415</posy>
 				<width>30</width>
 				<height>30</height>
 				<info>ListItem.Overlay</info>
@@ -419,7 +432,7 @@
 		<control type="largeimage">
 			<posy>0</posy>
 			<posx>0</posx>
-			<width>1280</width>
+			<width>1920</width>
 			<height>50</height>
 			<include>Black</include>
 		</control>
@@ -468,16 +481,13 @@
 	<include name="PlotFormat">
 		<posy>410</posy>
 		<posx>560</posx>
-		<width>685</width>
-		<height>200</height>
+		<width>870</width>
+		<height>335</height>
 		<font>Plot</font>
-		<include>White2</include>
-		<shadowcolor>ff111111</shadowcolor>
-		<autoscroll delay="10000" time="3000" repeat="5000">!Control.HasFocus(13)</autoscroll>
+		<include>White</include>
 	</include>
 	<include name="Plot">
 		<label>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?</label>
-		<autoscroll delay="10000" time="3000" repeat="5000">!Control.HasFocus(13)</autoscroll>
 	</include>
 	<include name="NoPlotDefault">
 		<label>$LOCALIZE[32103]$VAR[NoPlotDefaultItem]. $LOCALIZE[32104]</label>
@@ -486,14 +496,14 @@
 	<include name="Clock">
 		<control type="group">
 			<!--><animation effect="slide" start="0" end="391" time="400" tween="out" condition="Control.IsVisible(999)">Conditional</animation>-->
-			<posx>1180</posx>
+			<posy>60</posy>
+			<posx>56</posx>
 			<control type="label">
 				<label>$INFO[System.Time(short_no_meridian)]</label>
 				<width>200</width>
-				<align>right</align>
-				<height>68</height>
-				<font>Regular-17</font>
-				<textcolor>FF999999</textcolor>
+				<align>left</align>
+				<font>Light-36</font>
+				<textcolor>white</textcolor>
 			</control>
 		</control>
 	</include>
@@ -501,29 +511,29 @@
 	<include name="scrollOffset">
 		<control type="group">
 			<visible>Container.Scrolling</visible>
-			<animation effect="slide" time="500" delay="400" tween="circle" easing="out" start="0,300" end="0,0">Visible</animation>
-			<animation effect="slide" time="100" tween="circle" easing="in" start="0,0" end="0,300">Hidden</animation>
+			<animation effect="fade" time="200">Visible</animation>
+			<animation effect="fade" time="200">Hidden</animation>
 			<control type="group">
-				<posy>610</posy>
-				<posx>190r</posx>
+				<posy>945</posy>
+				<posx>145r</posx>
 				<control type="image">
 					<description>Background</description>
 					<width>100</width>
 					<height>85</height>
-					<include>DialogBG</include>
+					<!--<include>DialogBG</include>-->
 				</control>
-				<control type="image">
-					<description>Background border</description>
-					<width>102</width>
-					<height>87</height>
-					<include>DialogBorder</include>
-				</control>
-				<control type="image">
-					<description>Dialog arrow</description>
-					<posx>35</posx>
-					<posy>85</posy>
-					<include>DialogArrow</include>
-				</control>
+				<!--<control type="image">-->
+					<!--<description>Background border</description>-->
+					<!--<width>102</width>-->
+					<!--<height>87</height>-->
+					<!--<include>DialogBorder</include>-->
+				<!--</control>-->
+				<!--<control type="image">-->
+					<!--<description>Dialog arrow</description>-->
+					<!--<posx>35</posx>-->
+					<!--<posy>85</posy>-->
+					<!--<include>DialogArrow</include>-->
+				<!--</control>-->
 				<control type="label">
 					<posx>0</posx>
 					<posy>10</posy>
@@ -531,8 +541,7 @@
 					<width>100</width>
 					<aligny>center</aligny>
 					<align>center</align>
-					<font>Bold-52</font>
-					<shadowcolor>FF222222</shadowcolor>
+					<font>Light-56</font>
 					<textcolor>white</textcolor>
 					<label>$INFO[ListItem.SortLetter]</label>
 				</control>

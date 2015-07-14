@@ -11,8 +11,8 @@
 		<!-- ViewsDialog.xml -->
 		<include>DialogRating</include>
 		<control type="group">
-			<posx>180</posx>
-			<posy>266</posy>
+			<posx>214</posx>
+			<posy>360</posy>
 			<control type="image" id="10">
 				<texture>rating0.png</texture>
 				<colordiffuse>orange</colordiffuse>

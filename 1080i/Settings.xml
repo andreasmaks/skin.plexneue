@@ -11,14 +11,14 @@
 		</control>
 		<control type="image">
 			<description>Background</description>
-			<width>1280</width>
+			<width>1920</width>
 			<height>360</height>
 			<include>Black</include>
 		</control>
 		<control type="image">
 			<description>Background</description>
 			<posy>360</posy>
-			<width>1280</width>
+			<width>1920</width>
 			<height>360</height>
 			<include>Base</include>
 			<colordiffuse>FFd1801c</colordiffuse>
@@ -29,7 +29,7 @@
 			<posy>104</posy>
 			<posx>0</posx>
 			<height>152</height>
-			<width>1280</width>
+			<width>1920</width>
 			<texture>icon-pht.png</texture>
 			<aspectratio scalediffuse="false" align="center">keep</aspectratio>
 		</control>

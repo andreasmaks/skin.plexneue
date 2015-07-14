@@ -1,46 +1,43 @@
 <?xml version="1.0"?>
 <includes>
 	<!-- common variables -->
-	<include name="ListTitleBgTop">
-		<posx>0</posx>
-		<width>870</width>
-		<height>30</height>
-		<texture border="10" flipy="true">base-rounded-half-half.png</texture>
-		<colordiffuse>FF000000</colordiffuse>
-		<animation effect="fade" start="40" end="60" time="0" condition="true">Conditional</animation>
-	</include>
-	<include name="ListTitleBgBottom">
-		<posx>0</posx>
-		<width>870</width>
-		<height>30</height>
-		<texture border="10">base-rounded-half-half.png</texture>
-		<colordiffuse>FF000000</colordiffuse>
-		<animation effect="fade" start="40" end="60" time="0" condition="true">Conditional</animation>
-	</include>
+	<!--<include name="ListTitleBgTop">-->
+		<!--<posx>0</posx>-->
+		<!--<width>870</width>-->
+		<!--<height>30</height>-->
+		<!--&lt;!&ndash;<texture border="10" flipy="true">base-rounded-half-half.png</texture>&ndash;&gt;-->
+		<!--<colordiffuse>FF000000</colordiffuse>-->
+		<!--<animation effect="fade" start="40" end="60" time="0" condition="true">Conditional</animation>-->
+	<!--</include>-->
+	<!--<include name="ListTitleBgBottom">-->
+		<!--<posy>0</posy>-->
+		<!--<posx>0</posx>-->
+		<!--<width>870</width>-->
+		<!--<height>30</height>-->
+		<!--<animation effect="fade" start="40" end="60" time="0" condition="true">Conditional</animation>-->
+	<!--</include>-->
 	<include name="ListBgTop">
 		<posy>0</posy>
 		<posx>0</posx>
-		<width>870</width>
-		<height>236</height>
-		<include>BlackRoundedRight</include>
-		<animation effect="fade" start="0" end="40" time="300" condition="true">Conditional</animation>
+		<width>1280</width>
+		<height>1080</height>
+		<include>Blackmenu</include>
+		<animation effect="fade" start="0" end="100" time="300" condition="true">Conditional</animation>
 	</include>
 	<include name="ListBgBottom">
-		<posy>-207</posy>
+		<posy>0</posy>
 		<posx>0</posx>
-		<width>870</width>
-		<height>236</height>
-		<include>BlackRoundedRight</include>
-		<animation effect="fade" start="0" end="40" time="300" condition="true">Conditional</animation>
+		<width>1280</width>
+		<height>1080</height>
+		<include>Blackmenu</include>
+		<animation effect="fade" start="0" end="100" time="300" condition="true">Conditional</animation>
 	</include>
 	<include name="ListTitle">
-		<posy>2</posy>
-		<posx>855</posx>
-		<font>Bold-16</font>
-		<textcolor>orange</textcolor>
-		<shadowcolor>FF222222</shadowcolor>
+		<posy>60</posy>
+		<posx>1190</posx>
+		<font>Light-36</font>
+		<textcolor>white</textcolor>
 		<width>350</width>
-		<height>30</height>
 		<align>right</align>
 	</include>
 	<include name="ListArrow">
@@ -142,40 +139,104 @@
 			</control>
 		</control>
 	</include>
+	<include name="ListItemPosterTitle">
+		<control type="label">
+			<posy>30</posy>
+			<posx>0</posx>
+			<width>800</width>
+			<align>left</align>
+			<label>$INFO[ListItem.Label]</label>
+			<font>Light-48</font>
+			<textcolor>FF999999</textcolor>
+		</control>
+	</include>
+	<include name="ListItemPosterTitleSelected">
+		<control type="label">
+			<posy>30</posy>
+			<posx>0</posx>
+			<width>680</width>
+			<align>left</align>
+			<label>$INFO[ListItem.Label]</label>
+			<font>Light-48</font>
+			<textcolor>white</textcolor>
+			<animation start="0" end="80" time="400" condition="true">Conditional</animation>
+		</control>
+	</include>
 	<include name="ListItemPosterTitleTV1">
 		<control type="label">
 			<posy>190</posy>
 			<include>ListItemTitle1</include>
 		</control>
 	</include>
+	<include name="ListItemPosterTitleShow">
+		<control type="group">
+			<visible>ListItem.Type(episode)</visible>
+			<posy>30</posy>
+			<posx>0</posx>
+			<control type="label">
+				<width>780</width>
+				<align>left</align>
+				<scroll>false</scroll>
+				<label>$INFO[ListItem.TVShowTitle]</label>
+				<font>Light-48</font>
+				<textcolor>FF999999</textcolor>
+				<visible>![ListItem.TVShowTitle)]</visible>
+				<animation effect="fade" start="0" end="80" time="400" condition="true">Conditional</animation>
+			</control>
+		</control>
+	</include>
+	<include name="ListItemPosterTitleShowSelected">
+		<control type="group">
+			<visible>ListItem.Type(episode)</visible>
+			<posy>30</posy>
+			<posx>0</posx>
+			<control type="label">
+				<width>780</width>
+				<align>left</align>
+				<scroll>false</scroll>
+				<label>$INFO[ListItem.TVShowTitle]</label>
+				<font>Light-48</font>
+				<textcolor>white</textcolor>
+				<visible>![ListItem.TVShowTitle)]</visible>
+				<animation start="0" end="80" time="400" condition="true">Conditional</animation>
+			</control>
+		</control>
+	</include>
 	<include name="ListItemPosterTitleTV2">
 		<control type="group">
 			<visible>ListItem.Type(episode)</visible>
-			<posy>216</posy>
-			<posx>95</posx>
+			<posy>30</posy>
+			<posx>800</posx>
 			<control type="label">
-				<width>110</width>
-				<align>center</align>
+				<width>200</width>
+				<align>left</align>
 				<aligny>center</aligny>
 				<scroll>false</scroll>
-				<label>S$INFO[ListItem.Season] [COLOR=orange]&#xB7;[/COLOR] E$INFO[ListItem.Episode]</label>
-				<font>Bold-14</font>
-				<textcolor>white</textcolor>
+				<label>S$INFO[ListItem.Season] E$INFO[ListItem.Episode]</label>
+				<font>Light-48</font>
+				<textcolor>FF999999</textcolor>
 				<wrapmultiline>false</wrapmultiline>
 				<visible>![IsEmpty(ListItem.Season) | IsEmpty(ListItem.Episode)]</visible>
 				<animation effect="fade" start="0" end="80" time="400" condition="true">Conditional</animation>
 			</control>
+		</control>
+	</include>
+	<include name="ListItemPosterTitleTV2Selected">
+		<control type="group">
+			<visible>ListItem.Type(episode)</visible>
+			<posy>30</posy>
+			<posx>800</posx>
 			<control type="label">
-				<width>110</width>
-				<align>center</align>
+				<width>200</width>
+				<align>left</align>
 				<aligny>center</aligny>
 				<scroll>false</scroll>
-				<label>$INFO[ListItem.Date]</label>
-				<font>Bold-14</font>
+				<label>S$INFO[ListItem.Season] E$INFO[ListItem.Episode]</label>
+				<font>Light-48</font>
 				<textcolor>white</textcolor>
 				<wrapmultiline>false</wrapmultiline>
-				<visible>[IsEmpty(ListItem.Season) | IsEmpty(ListItem.Episode)]</visible>
-				<animation effect="fade" start="0" end="80" time="400" condition="true">Conditional</animation>
+				<visible>![IsEmpty(ListItem.Season) | IsEmpty(ListItem.Episode)]</visible>
+				<animation start="0" end="80" time="400" condition="true">Conditional</animation>
 			</control>
 		</control>
 	</include>
@@ -469,10 +530,10 @@
 		<control type="group" id="5000">
 			<include>FadeDialog</include>
 			<visible>[Control.IsVisible(11000) | Control.IsVisible(11001) | Control.IsVisible(11002) | Control.IsVisible(11003) | Control.IsVisible(11004) | Control.IsVisible(11005) | Control.IsVisible(11006) | Control.IsVisible(11007) | Control.IsVisible(12000)]</visible>
-			<posx>391</posx>
+			<posx>640</posx>
 			<posy>0</posy>
-			<width>890</width>
-			<height>720</height>
+			<width>1280</width>
+			<height>1080</height>
 			<!-- list titles & bg's & arrows (see includes on top for formatting) -->
 			<control type="group">
 				<!-- "on deck" & "Watch Later" -->
@@ -546,7 +607,7 @@
 					<!-- with "on deck" or "Watch Later + recommendations" or "PQ music" -->
 					<control type="group">
 						<visible>Control.IsVisible(11001) | [Control.IsVisible(11003) + Control.IsVisible(11004)] | [Control.IsVisible(11006) + Control.IsVisible(11007)]</visible>
-						<posy>666</posy>
+						<posy>0</posy>
 						<control type="image">
 							<include>ListBgBottom</include>
 						</control>
@@ -572,7 +633,8 @@
 					<!-- alone -->
 					<control type="group">
 						<visible>[Control.IsVisible(11000) + !Control.IsVisible(11001)] | [Control.IsVisible(11003) + !Control.IsVisible(11004)] | [!Control.IsVisible(11003) + Control.IsVisible(11004)] | Control.IsVisible(11002) | Control.IsVisible(11005) | [Control.IsVisible(11006) + !Control.IsVisible(11007)]</visible>
-						<posy>563</posy>
+						<!--Recently Background position-->
+						<posy>0</posy>
 						<control type="image">
 							<include>ListBgBottom</include>
 						</control>
@@ -581,7 +643,7 @@
 						</control>
 						<control type="label" id="8001">
 							<include>ListTitle</include>
-							<label>Recently Added</label>
+							<label>Neu</label>
 							<visible>Control.IsVisible(11000)</visible>
 						</control>
 						<control type="label" id="8001">
@@ -593,7 +655,7 @@
 							<include>ListTitle</include>
 							<label>Recommended</label>
 							<visible>Control.IsVisible(11004) + !Control.IsVisible(11003)</visible>
-						</control>						
+						</control>
 						<control type="label" id="8001">
 							<include>ListTitle</include>
 							<label>Playlists</label>
@@ -605,7 +667,7 @@
 							<visible>[Control.IsVisible(11006)]</visible>
 						</control>
 						<!-- arrow -->
-						<include>ListArrow</include>
+						<!--<include>ListArrow</include>-->
 					</control>
 				</control>
 			</control>
@@ -615,105 +677,105 @@
 				<visible>true</visible>
 				<posx>-3</posx>
 				<posy>84</posy>
-				<width>890</width>
-				<height>720</height>
+				<width>1260</width>
+				<height>1080</height>
 				<ondown>5200</ondown>
 				<onup>310</onup>
 				<onright>350</onright>
 				<onleft>350</onleft>
 				<orientation>vertical</orientation>
 				<!-- On Deck (11001) -->
-				<control type="group" id="7002">
-					<height>230</height>
-					<control type="fixedlist" id="11001">
-						<visible allowhiddenfocus="false">false</visible>
-						<orientation>horizontal</orientation>
-						<ondown condition="Control.IsVisible(11000)">7001</ondown>
-						<ondown condition="!Control.IsVisible(11000)">300</ondown>
-						<onup>300</onup>
-						<onright>-</onright>
-						<onleft>300</onleft>
-						<posx>0</posx>
-						<posy>129</posy>
-						<width>860</width>
-						<height>330</height>
-						<itemlayout width="139" height="330">
-							<!-- movie & episode when both lists are visible -->
-							<control type="group">
-								<posy>-3</posy>
-								<visible>[ListItem.Type(episode) | ListItem.Type(movie)] + Control.IsVisible(11000)</visible>
-								<animation effect="fade" start="100" end="50" time="300" condition="ControlGroup(7001).HasFocus">Conditional</animation>
-								<control type="group">
-									<include>ListItemPoster</include>
-									<include>ListItemInProgress</include>
-								</control>
-								<control type="group">
-									<visible>ListItem.Type(episode)</visible>
-									<include>ListItemPosterCard</include>
-									<include>ListItemPosterTitleTV2</include>
-									<include>ListItemInProgress</include>
-								</control>
-								<control type="image">
-									<visible>ControlGroup(7001).HasFocus</visible>
-									<include>ListItemPosterDimmer</include>
-								</control>
-							</control>
-							<!-- movie & episode when only this list is visible -->
-							<control type="group">
-								<posy>100</posy>
-								<visible>[ListItem.Type(episode) | ListItem.Type(movie)] + !Control.IsVisible(11000)</visible>
-								<animation effect="fade" start="100" end="50" time="300" condition="ControlGroup(7001).HasFocus">Conditional</animation>
-								<control type="group">
-									<include>ListItemPoster</include>
-									<include>ListItemInProgress</include>
-								</control>
-								<control type="group">
-									<visible>ListItem.Type(episode)</visible>
-									<include>ListItemPosterCard</include>
-									<include>ListItemPosterTitleTV2</include>
-									<include>ListItemInProgress</include>
-								</control>
-								<control type="image">
-									<visible>ControlGroup(7001).HasFocus</visible>
-									<include>ListItemPosterDimmer</include>
-								</control>
-							</control>
-						</itemlayout>
-						<focusedlayout width="139" height="330">
-							<!-- movie & episode when both lists are visible -->
-							<control type="group">
-								<posy>-3</posy>
-								<visible>[ListItem.Type(episode) | ListItem.Type(movie)] + Control.IsVisible(11000)</visible>
-								<include>ListItemPoster</include>
-								<include>ListItemPosterSelectedBorder</include>
-							</control>
-							<!-- movie & episode when only this list is visible -->
-							<control type="group">
-								<posy>100</posy>
-								<visible>[ListItem.Type(episode) | ListItem.Type(movie)] + !Control.IsVisible(11000)</visible>
-								<include>ListItemPoster</include>
-								<include>ListItemPosterSelectedBorder</include>
-							</control>
-						</focusedlayout>
-					</control>
-				</control>
+				<!--<control type="group" id="7002">-->
+					<!--<height>230</height>-->
+					<!--<control type="fixedlist" id="11001">-->
+						<!--<visible allowhiddenfocus="false">false</visible>-->
+						<!--<orientation>horizontal</orientation>-->
+						<!--<ondown condition="Control.IsVisible(11000)">7001</ondown>-->
+						<!--<ondown condition="!Control.IsVisible(11000)">300</ondown>-->
+						<!--<onup>300</onup>-->
+						<!--<onright>-</onright>-->
+						<!--<onleft>300</onleft>-->
+						<!--<posx>0</posx>-->
+						<!--<posy>129</posy>-->
+						<!--<width>860</width>-->
+						<!--<height>330</height>-->
+						<!--<itemlayout width="139" height="330">-->
+							<!--&lt;!&ndash; movie & episode when both lists are visible &ndash;&gt;-->
+							<!--<control type="group">-->
+								<!--<posy>-3</posy>-->
+								<!--<visible>[ListItem.Type(episode) | ListItem.Type(movie)] + Control.IsVisible(11000)</visible>-->
+								<!--<animation effect="fade" start="100" end="50" time="300" condition="ControlGroup(7001).HasFocus">Conditional</animation>-->
+								<!--<control type="group">-->
+									<!--<include>ListItemPoster</include>-->
+									<!--<include>ListItemInProgress</include>-->
+								<!--</control>-->
+								<!--<control type="group">-->
+									<!--<visible>ListItem.Type(episode)</visible>-->
+									<!--<include>ListItemPosterCard</include>-->
+									<!--<include>ListItemPosterTitleTV2</include>-->
+									<!--<include>ListItemInProgress</include>-->
+								<!--</control>-->
+								<!--<control type="image">-->
+									<!--<visible>ControlGroup(7001).HasFocus</visible>-->
+									<!--<include>ListItemPosterDimmer</include>-->
+								<!--</control>-->
+							<!--</control>-->
+							<!--&lt;!&ndash; movie & episode when only this list is visible &ndash;&gt;-->
+							<!--<control type="group">-->
+								<!--<posy>100</posy>-->
+								<!--<visible>[ListItem.Type(episode) | ListItem.Type(movie)] + !Control.IsVisible(11000)</visible>-->
+								<!--<animation effect="fade" start="100" end="50" time="300" condition="ControlGroup(7001).HasFocus">Conditional</animation>-->
+								<!--<control type="group">-->
+									<!--<include>ListItemPoster</include>-->
+									<!--<include>ListItemInProgress</include>-->
+								<!--</control>-->
+								<!--<control type="group">-->
+									<!--<visible>ListItem.Type(episode)</visible>-->
+									<!--<include>ListItemPosterCard</include>-->
+									<!--<include>ListItemPosterTitleTV2</include>-->
+									<!--<include>ListItemInProgress</include>-->
+								<!--</control>-->
+								<!--<control type="image">-->
+									<!--<visible>ControlGroup(7001).HasFocus</visible>-->
+									<!--<include>ListItemPosterDimmer</include>-->
+								<!--</control>-->
+							<!--</control>-->
+						<!--</itemlayout>-->
+						<!--<focusedlayout width="139" height="330">-->
+							<!--&lt;!&ndash; movie & episode when both lists are visible &ndash;&gt;-->
+							<!--<control type="group">-->
+								<!--<posy>-3</posy>-->
+								<!--<visible>[ListItem.Type(episode) | ListItem.Type(movie)] + Control.IsVisible(11000)</visible>-->
+								<!--<include>ListItemPoster</include>-->
+								<!--<include>ListItemPosterSelectedBorder</include>-->
+							<!--</control>-->
+							<!--&lt;!&ndash; movie & episode when only this list is visible &ndash;&gt;-->
+							<!--<control type="group">-->
+								<!--<posy>100</posy>-->
+								<!--<visible>[ListItem.Type(episode) | ListItem.Type(movie)] + !Control.IsVisible(11000)</visible>-->
+								<!--<include>ListItemPoster</include>-->
+								<!--<include>ListItemPosterSelectedBorder</include>-->
+							<!--</control>-->
+						<!--</focusedlayout>-->
+					<!--</control>-->
+				<!--</control>-->
 				<!-- Recently Added (11000) -->
 				<control type="group" id="7001">
-					<visible allowhiddenfocus="false">true</visible>
-					<height>230</height>
-					<control type="fixedlist" id="11000">
+					<!--<visible allowhiddenfocus="false">true</visible>-->
+					<height>530</height>
+					<control type="list" id="11000">
 						<visible allowhiddenfocus="false">false</visible>
-						<orientation>horizontal</orientation>
-						<ondown>300</ondown>
+						<orientation>vertical</orientation>
+						<!--<ondown>300</ondown>-->
 						<onup condition="Control.IsVisible(11001)">7002</onup>
 						<onup condition="!Control.IsVisible(11001)">300</onup>
 						<onright>-</onright>
 						<onleft>300</onleft>
-						<posx>0</posx>
-						<posy>6</posy>
-						<width>860</width>
-						<height>330</height>
-						<itemlayout width="139" height="230">
+						<posx>64</posx>
+						<posy>206</posy>
+						<width>1200</width>
+						<height>580</height>
+						<itemlayout width="1000" height="83">
 							<!-- album -->
 							<control type="group">
 								<visible>ListItem.Type(album)</visible>
@@ -731,11 +793,11 @@
 							</control>
 							<!-- movie & episode when both lists are visible -->
 							<control type="group">
-								<posy>100</posy>
+								<posy>0</posy>
 								<visible>[ListItem.Type(episode) | ListItem.Type(movie) | ListItem.Type(season)] + Control.IsVisible(11001)</visible>
 								<animation effect="fade" start="100" end="50" time="300" condition="ControlGroup(7002).HasFocus">Conditional</animation>
 								<control type="group">
-									<include>ListItemPoster</include>
+									<include>ListItemPosterTitle</include>
 								</control>
 								<control type="group">
 									<visible>ListItem.Type(episode)</visible>
@@ -756,25 +818,30 @@
 							</control>
 							<!-- movie & episode when only this list is visible -->
 							<control type="group">
-								<visible>[ListItem.Type(episode) | ListItem.Type(movie) | ListItem.Type(season)] + !Control.IsVisible(11001)</visible>
+
+								<visible>[ListItem.Type(tvshowtitle) | ListItem.Type(episode) | ListItem.Type(movie) | ListItem.Type(season)] + !Control.IsVisible(11001)</visible>
 								<control type="group">
-									<include>ListItemPoster</include>
+									<visible>ListItem.Type(movie)</visible>
+									<include>ListItemPosterTitle</include>
 								</control>
 								<control type="group">
 									<visible>ListItem.Type(episode)</visible>
-									<include>ListItemPosterCard</include>
+									<include>ListItemPosterTitleShow</include>
+									<include>ListItemInProgress</include>
+								</control>
+								<control type="group">
+									<visible>ListItem.Type(episode)</visible>
 									<include>ListItemPosterTitleTV2</include>
 									<include>ListItemInProgress</include>
 								</control>
 								<control type="group">
 									<visible>ListItem.Type(season)</visible>
-									<include>ListItemPosterCard</include>
 									<include>ListItemPosterTitleTV3</include>
 									<include>ListItemInProgress</include>
 								</control>
 							</control>
 						</itemlayout>
-						<focusedlayout width="139" height="230">
+						<focusedlayout width="1000" height="83">
 							<animation effect="fade" start="100" end="50" time="300" condition="ControlGroup(7002).HasFocus">Conditional</animation>
 							<!-- album -->
 							<control type="group">
@@ -795,17 +862,22 @@
 							</control>
 							<!-- movie & episode when both lists are visible -->
 							<control type="group">
-								<posy>100</posy>
 								<visible>[ListItem.Type(episode) | ListItem.Type(movie) | ListItem.Type(season)] + Control.IsVisible(11001)</visible>
-								<include>ListItemPoster</include>
-								<include>ListItemPosterSelectedBorder</include>
+								<!--<include>ListItemPosterTitle</include>-->
 							</control>
-							<!-- tv show episode when  only this list is visible -->
+							<!-- movie when only this list is visible -->
 							<control type="group">
-								<visible>[ListItem.Type(episode) | ListItem.Type(movie) | ListItem.Type(season)] + !Control.IsVisible(11001)</visible>
-								<include>ListItemPoster</include>
-								<include>ListItemPosterSelectedBorder</include>
+								<visible>[ListItem.Type(movie)] + !Control.IsVisible(11001)</visible>
+								<include>ListItemPosterTitleSelected</include>
 							</control>
+							<!-- tv show episode when only this list is visible -->
+							<control type="group">
+								<visible>[ListItem.Type(episode) | ListItem.Type(season)] + !Control.IsVisible(11001)</visible>
+								<include>ListItemPosterTitleShowSelected</include>
+								<include>ListItemPosterTitleTV2Selected</include>
+							</control>
+
+
 						</focusedlayout>
 					</control>
 				</control>
@@ -816,7 +888,7 @@
 				<posx>0</posx>
 				<posy>90</posy>
 				<width>890</width>
-				<height>720</height>
+				<height>1080</height>
 				<ondown>5200</ondown>
 				<onup>310</onup>
 				<onright>350</onright>
@@ -902,7 +974,7 @@
 						<onleft>300</onleft>
 						<posx>-12</posx>
 						<posy>0</posy>
-						<width>880</width>
+						<width>1000</width>
 						<height>400</height>
 						<itemlayout width="211" height="230">
 							<!-- when both lists are visible -->
@@ -963,7 +1035,7 @@
 				<posx>0</posx>
 				<posy>226</posy>
 				<width>860</width>
-				<height>720</height>
+				<height>1080</height>
 				<ondown>-</ondown>
 				<onup>-</onup>
 				<onright>350</onright>
@@ -1012,7 +1084,7 @@
 				<posx>0</posx>
 				<posy>226</posy>
 				<width>860</width>
-				<height>720</height>
+				<height>1080</height>
 				<ondown>300</ondown>
 				<onup>300</onup>
 				<onright>350</onright>
@@ -1058,7 +1130,7 @@
 				<posx>-3</posx>
 				<posy>84</posy>
 				<width>890</width>
-				<height>720</height>
+				<height>1080</height>
 				<ondown>5200</ondown>
 				<onup>310</onup>
 				<onright>350</onright>
@@ -1211,9 +1283,9 @@
 				</control>
 			</control>
 		</control>
-		<!-- Item Full Info -->
-		<control type="group">
-			<include>HomeListItemFullInfo</include>
-		</control>
+		 <!--Item Full Info-->
+		<!--<control type="group">-->
+			<!--<include>HomeListItemFullInfo</include>-->
+		<!--</control>-->
 	</include>
 </includes>

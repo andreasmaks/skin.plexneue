@@ -37,63 +37,46 @@
 			<control type="image">
 				<posx>0</posx>
 				<posy>0</posy>
-				<width>391</width>
-				<height>720</height>
-				<include>Black</include>
-				<animation effect="fade" start="0" end="30" time="0" condition="true">Conditional</animation>
+				<width>640</width>
+				<height>1080</height>
+				<include>Blackmenu</include>
+				<animation start="0" end="30" time="0" condition="true">Conditional</animation>
 				<visible>true</visible>
 			</control>
-			<control type="image">
-				<posx>377</posx>
-				<posy>440</posy>
-				<width>14</width>
-				<height>30</height>
-				<texture flipx="true">arrow-big.png</texture>
-				<colordiffuse>orange</colordiffuse>
-				<aspectratio>keep</aspectratio>
-				<animation effect="fade" start="0" end="100" time="0" condition="true">Conditional</animation>
-				<visible>!Control.Isvisible(999)</visible>
-			</control>
-			<control type="image">
-				<posx>372</posx>
-				<posy>0</posy>
-				<width>19</width>
-				<height>731</height>
-				<texture>separator.png</texture>
-				<aspectratio>stretch</aspectratio>
-				<animation effect="fade" start="0" end="100" time="0" condition="true">Conditional</animation>
-				<visible>true</visible>
-			</control>
+			<!--<control type="image">-->
+				<!--<posx>377</posx>-->
+				<!--<posy>440</posy>-->
+				<!--<width>14</width>-->
+				<!--<height>30</height>-->
+				<!--<texture flipx="true">arrow-big.png</texture>-->
+				<!--<colordiffuse>orange</colordiffuse>-->
+				<!--<aspectratio>keep</aspectratio>-->
+				<!--<animation effect="fade" start="0" end="100" time="0" condition="true">Conditional</animation>-->
+				<!--<visible>!Control.Isvisible(999)</visible>-->
+			<!--</control>-->
+			<!--<control type="image">-->
+				<!--<posx>372</posx>-->
+				<!--<posy>0</posy>-->
+				<!--<width>19</width>-->
+				<!--<height>731</height>-->
+				<!--<texture>separator.png</texture>-->
+				<!--<aspectratio>stretch</aspectratio>-->
+				<!--<animation effect="fade" start="0" end="100" time="0" condition="true">Conditional</animation>-->
+				<!--<visible>true</visible>-->
+			<!--</control>-->
 		</control>
 	</include>
 	<include name="MenuFocusedLabel">
 		<control type="group">
-			<posx>363</posx>
-			<posy>456</posy>
+			<posx>588</posx>
+			<posy>310</posy>
 			<include>ShowHomeClassic</include>
 			<control type="label">
-				<width>353</width>
-				<height>0</height>
+				<width>490</width>
 				<label>$INFO[Container(300).ListItem(0).Label]</label>
 				<align>right</align>
-				<aligny>center</aligny>
-				<font>Bold-36</font>
-				<textcolor>orange</textcolor>
-				<shadowcolor>FF222222</shadowcolor>
-			</control>
-			<!-- with Label2 -->
-			<control type="label">
-				<posy>22</posy>
-				<width>353</width>
-				<height>20</height>
-				<label>$INFO[Container(300).ListItem(0).Label2]</label>
-				<align>right</align>
-				<aligny>center</aligny>
-				<font>Bold-16</font>
+				<font>Light-72</font>
 				<textcolor>white</textcolor>
-				<shadowcolor>FF222222</shadowcolor>
-				<visible>!IsEmpty(Container(300).ListItem(0).Label2)</visible>
-				<animation effect="fade" end="100" time="0" condition="true">Conditional</animation>
 			</control>
 		</control>
 	</include>
@@ -104,13 +87,13 @@
 			<include>MenuSeparatorVertical</include>
 			<include>MenuFocusedLabel</include>
 			<control type="image">
-				<posy>680</posy>
-				<posx>30</posx>
-				<width>12</width>
+				<posy>1020</posy>
+				<posx>70</posx>
+				<width>11</width>
 				<height>18</height>
-				<aspectratio>scale</aspectratio>
-				<texture flipx="true">left-menu-indicator-arrow.png</texture>
-				<animation effect="rotate" end="-180" center="36,689" time="300" condition="Window.IsActive(4998)">Conditional</animation>
+				<aspectratio>keep</aspectratio>
+				<texture>left-menu-indicator-arrow.png</texture>
+				<animation effect="rotate" end="-180" center="76,1029" time="300" condition="Window.IsActive(4998)">Conditional</animation>
 				<animation type="Conditional" condition="ControlGroup(5000).HasFocus()" reversible="false">
 					<effect type="fade" start="100" end="0" time="0"/>
 				</animation>
@@ -118,66 +101,64 @@
 			<!-- list -->
 			<control type="wraplist" id="300">
 				<description>Home Main Menu</description>
-				<posx>0</posx>
-				<posy>103</posy>
-				<width>372</width>
-				<height>570</height>
+				<posx>70</posx>
+				<posy>250</posy>
+				<width>570</width>
+				<height>560</height>
 				<onup>300</onup>
 				<ondown>300</ondown>
 				<onleft>Plex.ActivateWindow(4998)</onleft>
 				<onright>5000</onright>
-				<focusposition>6</focusposition>
-				<scrolltime>200</scrolltime>
+				<focusposition>0</focusposition>
+				<scrolltime>250</scrolltime>
 				<animation type="Conditional" condition="!Window.IsActive(4998)" reversible="false">
-					<effect type="rotatey" center="304" start="80,455" end="0,455" time="300"/>
+					<effect type="rotatey" center="504" start="80,455" end="0,455" time="300"/>
 					<effect type="fade" start="0" end="100" time="50" delay="0"/>
 				</animation>
 				<animation type="Conditional" condition="Window.IsActive(4998)" reversible="false">
-					<effect type="rotatey" center="304" start="0,455" end="80,455" time="300"/>
+					<effect type="rotatey" center="504" start="0,455" end="80,455" time="300"/>
 					<effect type="fade" start="100" end="0" time="230"/>
 				</animation>
 				<animation type="Conditional" condition="ControlGroup(5000).HasFocus()" reversible="false">
-					<effect type="fade" start="100" end="0" time="0"/>
+					<effect type="fade" start="100" end="30" time="0"/>
 				</animation>
-				<itemlayout width="600" height="50">
+				<itemlayout width="600" height="110">
 					<control type="label">
-						<posx>372</posx>
-						<posy>20</posy>
-						<width>360</width>
+						<posx>518</posx>
+						<posy>60</posy>
+						<width>490</width>
 						<height>0</height>
 						<label>$INFO[ListItem.Label]</label>
 						<info>ListItem.Label</info>
 						<align>right</align>
-						<aligny>center</aligny>
-						<font>Regular-28</font>
-						<textcolor>white</textcolor>
-						<shadowcolor>FF333333</shadowcolor>
+						<font>Light-72</font>
+						<textcolor>FF999999</textcolor>
+						<animation>
+							<effect type="fade" start="100" end="0" time="230"/>
+						</animation>
 					</control>
 				</itemlayout>
-				<focusedlayout width="600" height="120">
+				<focusedlayout width="600" height="110">
 					<control type="label">
-						<posx>363</posx>
-						<posy>53</posy>
-						<width>353</width>
+						<posx>518</posx>
+						<posy>60</posy>
+						<width>490</width>
 						<height>0</height>
 						<label>$INFO[ListItem.Label]</label>
 						<align>right</align>
-						<aligny>center</aligny>
-						<font>Bold-36</font>
-						<textcolor>orange</textcolor>
-						<shadowcolor>FF222222</shadowcolor>
+						<font>Light-72</font>
+						<textcolor>white</textcolor>
 					</control>
 					<control type="label">
-						<posx>363</posx>
-						<posy>75</posy>
+						<posx>372</posx>
+						<posy>0</posy>
 						<width>250</width>
-						<height>20</height>
+						<height>100</height>
 						<label>$INFO[ListItem.Label2]</label>
 						<align>right</align>
 						<aligny>center</aligny>
-						<font>Bold-16</font>
+						<font>Light-72</font>
 						<textcolor>white</textcolor>
-						<shadowcolor>FF222222</shadowcolor>
 						<visible>!IsEmpty(ListItem.Property(SectionNameCollision))</visible>
 					</control>
 				</focusedlayout>

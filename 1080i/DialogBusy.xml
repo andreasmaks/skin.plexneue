@@ -6,7 +6,7 @@
 		<posy>0</posy>
 	</coordinates>
 	<!-- ViewsDialog.xml -->
-	<include>DialogBottomRightSlide</include>
+	<include>DialogFadeInOut</include>
 	<controls>
 		<!-- ViewsDialog.xml -->
 		<include>DialogBusy</include>

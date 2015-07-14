@@ -4,11 +4,10 @@
 		<import addon="xbmc.gui" version="4.0.0"/>
 	</requires>
 	<extension point="xbmc.gui.skin" defaultthemename="textures.xbt" debugging="false" effectslowdown="0.75">
-		<res width="1280" height="720" aspect="16:9" default="true" folder="720p"/>
-		<res width="1280" height="800" aspect="16:10" default="false" folder="720p"/>
+		<res width="1920" height="1080" aspect="16:9" default="true" folder="1080i"/>
 	</extension>
 	<extension point="xbmc.addon.metadata">
-		<summary lang="en">Plex neue by Andreas maks</summary>
+		<summary lang="en">Plex Neue by Andreas maks</summary>
 		<description lang="en">"Plex Neue" based on Plex's default Skin by Sebastian Pitkanen</description>
 		<disclaimer lang="en">"Plex Neue" based on Plex's default Skin by Sebastian Pitkanen</disclaimer>
 		<platform>all</platform>

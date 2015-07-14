@@ -7,8 +7,8 @@
 			<description>visualisation</description>
 			<posx>0</posx>
 			<posy>0</posy>
-			<width>1280</width>
-			<height>720</height>
+			<width>1920</width>
+			<height>1080</height>
 		</control>
 		<!-- codec & viz infos -->
 		

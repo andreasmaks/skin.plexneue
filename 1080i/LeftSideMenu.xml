@@ -5,9 +5,9 @@
 		<animation effect="slide" start="0" end="-74" time="400">Hidden</animation>
 	</include>
 	<include name="leftMenuSlide">
-		<animation effect="slide" start="0" end="246" time="500" condition="ControlGroup(1300).HasFocus()">Conditional</animation>
-		<animation effect="slide" start="0" end="-246" time="500" condition="ControlGroup(1300).HasFocus()">WindowClose</animation>
-		<animation effect="slide" start="0" end="-246" time="500" condition="ControlGroup(1300).HasFocus() + Container.PlexContent(Secondary)">Conditional</animation>
+		<animation effect="slide" start="0" end="400" time="500" condition="ControlGroup(1300).HasFocus()">Conditional</animation>
+		<animation effect="slide" start="0" end="-400" time="500" condition="ControlGroup(1300).HasFocus()">WindowClose</animation>
+		<animation effect="slide" start="0" end="-400" time="500" condition="ControlGroup(1300).HasFocus() + Container.PlexContent(Secondary)">Conditional</animation>
 	</include>
 	<include name="leftMenuSlideHome">
 		<animation effect="slide" start="0" end="317" time="500" condition="ControlGroup(1300).HasFocus()">Conditional</animation>
@@ -21,37 +21,37 @@
 	</include>
 	<include name="rightSideSlide">
 		<include>leftMenuSlide</include>
-		<animation effect="fade" start="100" end="50" time="300" condition="ControlGroup(1300).HasFocus()">Conditional</animation>
+		<animation effect="fade" start="100" end="50" time="500" condition="ControlGroup(1300).HasFocus()">Conditional</animation>
 	</include>
 	<include name="leftMenuBg">
 		<control type="group">
 			<posy>0</posy>
 			<!-- Background -->
 			<control type="image">
-				<posx>-253</posx>
-				<height>720</height>
-				<width>254</width>
+				<posx>-400</posx>
+				<height>1080</height>
+				<width>400</width>
 				<include>Black</include>
 				<animation type="Conditional" condition="true">
-					<effect type="fade" start="0" end="75"/>
+					<effect type="fade" start="0" end="70"/>
 				</animation>
 			</control>
 			<control type="image">
 				<posx>0</posx>
-				<width>74</width>
-				<height>720</height>
-				<include>Black</include>
+				<width>150</width>
+				<height>1080</height>
+				<!--<include>Black</include>-->
 			</control>
-			<control type="image">
-				<posy>498</posy>
-				<posx>74</posx>
-				<width>16</width>
-				<height>32</height>
-				<aspectratio>scale</aspectratio>
-				<texture>arrow-big.png</texture>
-				<colordiffuse>FF000000</colordiffuse>
-				<visible>!Control.IsVisible(41)</visible>
-			</control>
+			<!--<control type="image">-->
+				<!--<posy>498</posy>-->
+				<!--<posx>74</posx>-->
+				<!--<width>16</width>-->
+				<!--<height>32</height>-->
+				<!--<aspectratio>scale</aspectratio>-->
+				<!--<texture>arrow-big.png</texture>-->
+				<!--<colordiffuse>FF000000</colordiffuse>-->
+				<!--<visible>!Control.IsVisible(41)</visible>-->
+			<!--</control>-->
 			<!--><control type="image">
 				<posy>41</posy>
 				<posx>25</posx>
@@ -63,14 +63,14 @@
 				<visible>!Container.PlexContent(Movie) + !Container.PlexContent(Episode) + !Container.PlexContent(Clip) + !Container.PlexContent(Channel) + !Control.IsVisible(998)</visible>
 			</control>-->
 			<control type="image">
-				<posy>680</posy>
-				<posx>30</posx>
-				<width>12</width>
+				<posy>1020</posy>
+				<posx>70</posx>
+				<width>11</width>
 				<height>18</height>
-				<aspectratio>scale</aspectratio>
-				<texture flipx="true">left-menu-indicator-arrow.png</texture>
-				<animation effect="rotate" end="-180" center="36,689" time="500" condition="ControlGroup(1300).HasFocus">Conditional</animation>
-				<visible>[!Container.PlexContent(Albums) | [Container.PlexContent(Albums) + !IsEmpty(Container.Property(primaryFilterActivated))]] + !Container.PlexContent(Songs) + !Container.PlexContent(Seasons) + [!Container.PlexContent(Episodes) | [Container.PlexContent(Episodes) + !IsEmpty(Container.Property(primaryFilterActivated)) + IsEmpty(Container.Property(PlexPreplay))]] + ![Container.PlexContent(Channel) + [ListItem.Type(clip) | ListItem.Type(episode)]]</visible>
+				<aspectratio>keep</aspectratio>
+				<texture flipx="false">left-menu-indicator-arrow.png</texture>
+				<animation effect="rotate" end="-180" center="76,1029" time="500" condition="ControlGroup(1300).HasFocus">Conditional</animation>
+				<visible>[!Container.PlexContent(Movie) + !Container.PlexContent(Albums) | [Container.PlexContent(Albums) + !IsEmpty(Container.Property(primaryFilterActivated))]] + !Container.PlexContent(Songs) + !Container.PlexContent(Seasons) + [!Container.PlexContent(Episodes) | [Container.PlexContent(Episodes) + !IsEmpty(Container.Property(primaryFilterActivated)) + IsEmpty(Container.Property(PlexPreplay))]] + ![Container.PlexContent(Channel) + [ListItem.Type(clip) | ListItem.Type(episode)]]</visible>
 			</control>
 		</control>
 	</include>
@@ -80,7 +80,7 @@
 			<!-- Background -->
 			<control type="image">
 				<posx>-253</posx>
-				<height>720</height>
+				<height>1080</height>
 				<width>254</width>
 				<include>Black</include>
 				<animation type="Conditional" condition="true">
@@ -90,7 +90,7 @@
 			<control type="image">
 				<posx>0</posx>
 				<width>74</width>
-				<height>720</height>
+				<height>1080</height>
 				<include>Black</include>
 			</control>
 			<control type="image">
@@ -110,17 +110,17 @@
 			<!-- Background -->
 			<control type="image">
 				<posx>-324</posx>
-				<height>720</height>
+				<height>1080</height>
 				<width>325</width>
 				<include>Black</include>
 				<animation type="Conditional" condition="true">
-					<effect type="fade" start="0" end="75"/>
+					<effect type="fade" start="0" end="35"/>
 				</animation>
 			</control>
 			<control type="image">
 				<posx>0</posx>
 				<width>74</width>
-				<height>720</height>
+				<height>1080</height>
 				<include>Black</include>
 				<animation type="Conditional" condition="ControlGroup(1300).HasFocus()">
 					<effect type="fade" start="0" time="300" end="75"/>
@@ -161,30 +161,28 @@
 		</control>
 	</include>
 	<include name="leftMenuTitle">
-		<textoffsety>5</textoffsety>
-		<textoffsetx>20</textoffsetx>
-		<font>Regular-26</font>
-		<height>55</height>
-		<textcolor>FFCCCCCC</textcolor>
-		<shadowcolor>black</shadowcolor>
+		<textoffsety>0</textoffsety>
+		<textoffsetx>0</textoffsetx>
+		<font>Light-30</font>
+		<height>75</height>
+		<textcolor>white</textcolor>
 		<texturenofocus>-</texturenofocus>
 		<animation effect="fade" start="100" end="100" time="0" condition="true">Conditional</animation>
 		<align>right</align>
-		<width>253</width>
+		<width>370</width>
 	</include>
 	<include name="leftMenuSpacing">
-		<height>45</height>
+		<height>85</height>
 	</include>
 	<include name="leftMenuFormat">
-		<width>250</width>
-		<height>24</height>
+		<width>370</width>
+		<height>30</height>
 		<align>right</align>
-		<textoffsety>5</textoffsety>
-		<textoffsetx>34</textoffsetx>
-		<font>Regular-17</font>
-		<shadowcolor>ff222222</shadowcolor>
-		<textcolor>FFCCCCCC</textcolor>
-		<focusedcolor>orangeLight</focusedcolor>
+		<textoffsety>0</textoffsety>
+		<textoffsetx>0</textoffsetx>
+		<font>Light-25</font>
+		<textcolor>FF999999</textcolor>
+		<focusedcolor>white</focusedcolor>
 		<texturefocus>-</texturefocus>
 		<texturenofocus>-</texturenofocus>
 		<scroll>true</scroll>
@@ -193,12 +191,12 @@
 		</animation>
 	</include>
 	<include name="leftSubMenuClearFilters">
-		<width>220</width>
+		<width>420</width>
 		<height>26</height>
 		<align>left</align>
 		<textoffsety>5</textoffsety>
 		<textoffsetx>10</textoffsetx>
-		<font>Bold-17</font>
+		<font>light-25</font>
 		<shadowcolor>ff222222</shadowcolor>
 		<textcolor>white</textcolor>
 		<focusedcolor>orangeLight</focusedcolor>
@@ -209,23 +207,23 @@
 		</animation>
 	</include>
 	<include name="leftMenuClearFilters">
-		<width>250</width>
-		<height>26</height>
+		<width>370</width>
+		<height>34</height>
 		<align>right</align>
-		<textoffsety>5</textoffsety>
+		<textoffsety>0</textoffsety>
 		<textoffsetx>0</textoffsetx>
-		<font>Bold-17</font>
+		<font>light-25</font>
 		<shadowcolor>ff222222</shadowcolor>
 		<textcolor>white</textcolor>
 		<focusedcolor>orangeLight</focusedcolor>
-		<texturefocus>bg-b-clear-filters-s.png</texturefocus>
+		<texturefocus>transparent.png</texturefocus>
 		<texturenofocus>-</texturenofocus>
 		<animation type="Conditional" condition="true">
 			<effect type="fade" start="0" end="100"/>
 		</animation>
 	</include>
 	<include name="leftMenuFormatPreplay">
-		<width>230</width>
+		<width>330</width>
 		<height>24</height>
 		<align>right</align>
 		<textoffsety>5</textoffsety>
@@ -242,39 +240,39 @@
 	</include>
 	<include name="leftMenuFilterRadioButton">
 		<description>default radio button</description>
-		<textureradiofocus>left-menu-ticked-icon.png</textureradiofocus>
+		<textureradiofocus>transparent.png</textureradiofocus>
 		<textureradionofocus>-</textureradionofocus>
 		<align>right</align>
 		<aligny>center</aligny>
 		<pulseonselect>false</pulseonselect>
-		<radioheight>14</radioheight>
-		<radiowidth>20</radiowidth>
+		<radioheight>0</radioheight>
+		<radiowidth>0</radiowidth>
 	</include>
 	<include name="leftSubMenuRadioButton">
-		<width>185</width>
-		<height>26</height>
+		<width>250</width>
+		<height>40</height>
 		<align>left</align>
 		<aligny>center</aligny>
-		<textoffsetx>10</textoffsetx>
-		<font>Regular-17</font>
-		<shadowcolor>ff222222</shadowcolor>
-		<textcolor>FFCCCCCC</textcolor>
-		<focusedcolor>orangeLight</focusedcolor>
-		<texturefocus border="5">black-bottom-grey.png</texturefocus>
+		<textoffsetx>0</textoffsetx>
+		<font>Light-25</font>
+		<textcolor>FF999999</textcolor>
+		<focusedcolor>white</focusedcolor>
+		<texturefocus border="5">transparent.png</texturefocus>
 		<texturenofocus border="5">-</texturenofocus>
-		<radioposx>191</radioposx>
+		<radioposx>255</radioposx>
 		<radioheight>26</radioheight>
 	</include>
 	<include name="leftMenuSortingButton">
 		<description>sorting radio button</description>
-		<textureorderascending>arrow-big-up-orange.png</textureorderascending>
-		<textureorderdescending flipy="true">arrow-big-up-orange.png</textureorderdescending>
+		<textureorderascending>transparent.png</textureorderascending>
+		<textureorderdescending flipy="true">transparent.png</textureorderdescending>
 		<align>right</align>
 		<aligny>center</aligny>
 		<pulseonselect>false</pulseonselect>
 		<radioheight>14</radioheight>
 		<radiowidth>16</radiowidth>
-		<radioposy>6</radioposy>
+		<radioposy>8</radioposy>
+		<radioposx>322</radioposx>
 	</include>
 	<!-- preplay buttons -->
 	<include name="leftMenuBarIcon">
@@ -290,7 +288,7 @@
 	</include>
 	<include name="leftMenuBarButton">
 		<width>74</width>
-		<height>30</height>
+		<height>34</height>
 		<onleft condition="[!Container.PlexContent(Albums) | [Container.PlexContent(Albums) + [Container.PlexFilter(Albums) | Container.PlexFilter(recentlyAdded)]]] + !Container.PlexContent(Songs) + !Container.PlexContent(Movie) + !Container.PlexContent(Seasons) + [!Container.PlexContent(Episodes) | [Container.PlexContent(Episodes) + !IsEmpty(Container.Property(primaryFilterActivated)) + IsEmpty(Container.Property(PlexPreplay))]] + !Container.PlexContent(Episode) + !Container.PlexContent(Clip) + ![Container.PlexContent(Channel) + [ListItem.Type(clip) | ListItem.Type(episode) | ListItem.Type(song)]]">1300</onleft>
 		<onright>777</onright>
 	</include>
@@ -302,7 +300,7 @@
 			<control type="wraplist" id="1300">
 				<description>Home Secondary Menu</description>
 				<posx>0</posx>
-				<posy>303</posy>
+				<posy>360</posy>
 				<width>372</width>
 				<height>320</height>
 				<onup>1300</onup>
@@ -319,33 +317,31 @@
 					<effect type="rotatey" center="304" start="0,455" end="-90,455" time="300"/>
 					<effect type="fade" start="100" end="0" time="230"/>
 				</animation>
-				<itemlayout width="600" height="50">
+				<itemlayout width="600" height="60">
 					<control type="label">
-						<posx>372</posx>
-						<posy>20</posy>
+						<posx>360</posx>
+						<posy>50</posy>
 						<width>360</width>
 						<height>0</height>
 						<label>$INFO[ListItem.Label]</label>
 						<info>ListItem.Label</info>
 						<align>right</align>
 						<aligny>center</aligny>
-						<font>Regular-28</font>
-						<textcolor>white</textcolor>
-						<shadowcolor>FF333333</shadowcolor>
+						<font>Light-36</font>
+						<textcolor>FF999999</textcolor>
 					</control>
 				</itemlayout>
-				<focusedlayout width="600" height="120">
+				<focusedlayout width="600" height="60">
 					<control type="label">
-						<posx>363</posx>
-						<posy>53</posy>
+						<posx>360</posx>
+						<posy>50</posy>
 						<width>353</width>
 						<height>0</height>
 						<info>ListItem.Label</info>
 						<align>right</align>
 						<aligny>center</aligny>
-						<font>Bold-36</font>
-						<textcolor>orange</textcolor>
-						<shadowcolor>FF222222</shadowcolor>
+						<font>Light-36</font>
+						<textcolor>white</textcolor>
 					</control>
 				</focusedlayout>
 				<!-- additional menu items -->
@@ -439,9 +435,9 @@
 			<control type="wraplist" id="1300">
 				<description>Home Secondary Menu</description>
 				<posx>0</posx>
-				<posy>353</posy>
+				<posy>392</posy>
 				<width>372</width>
-				<height>220</height>
+				<height>262</height>
 				<onup>1300</onup>
 				<ondown>1300</ondown>
 				<onleft>-</onleft>
@@ -456,33 +452,31 @@
 					<effect type="rotatey" center="304" start="0,455" end="-90,455" time="300"/>
 					<effect type="fade" start="100" end="0" time="230"/>
 				</animation>
-				<itemlayout width="600" height="50">
+				<itemlayout width="600" height="90">
 					<control type="label">
-						<posx>372</posx>
-						<posy>20</posy>
+						<posx>360</posx>
+						<posy>50</posy>
 						<width>360</width>
 						<height>0</height>
 						<label>$INFO[ListItem.Label]</label>
 						<info>ListItem.Label</info>
 						<align>right</align>
 						<aligny>center</aligny>
-						<font>Regular-28</font>
-						<textcolor>white</textcolor>
-						<shadowcolor>FF333333</shadowcolor>
+						<font>Light-48</font>
+						<textcolor>FF999999</textcolor>
 					</control>
 				</itemlayout>
-				<focusedlayout width="600" height="120">
+				<focusedlayout width="600" height="90">
 					<control type="label">
-						<posx>363</posx>
-						<posy>53</posy>
+						<posx>360</posx>
+						<posy>50</posy>
 						<width>353</width>
 						<height>0</height>
 						<info>ListItem.Label</info>
 						<align>right</align>
 						<aligny>center</aligny>
-						<font>Bold-36</font>
-						<textcolor>orange</textcolor>
-						<shadowcolor>FF222222</shadowcolor>
+						<font>Light-48</font>
+						<textcolor>white</textcolor>
 					</control>
 				</focusedlayout>
 				<!-- additional menu items -->
@@ -528,14 +522,14 @@
 			<!-- sidebar global -->
 			<control type="grouplist" id="998">
 				<visible>!Container.PlexContent(Movie) + !Container.PlexContent(Episode) + !Container.PlexContent(Clip) + Control.IsVisible(995)</visible>
-				<posy>40</posy>
-				<posx>0</posx>
-				<width>74</width>
+				<posy>52</posy>
+				<posx>39</posx>
+				<width>150</width>
 				<aligny>top</aligny>
 				<onup>998</onup>
 				<ondown>998</ondown>
 				<orientation>vertical</orientation>
-				<itemgap>20</itemgap>
+				<itemgap>50</itemgap>
 				<!-- Filters -->
 				<control type="button" id="102">
 					<texturefocus>left-menu-filters-icon-s.png</texturefocus>
@@ -544,7 +538,7 @@
 					<include>leftMenuBarButton</include>
 					<visible>[!Container.PlexContent(Albums) | [Container.PlexContent(Albums) + [Container.PlexFilter(Albums) | Container.PlexFilter(recentlyAdded)]]] + !Container.PlexContent(Songs) + !Container.PlexContent(Seasons) + [!Container.PlexContent(Episodes) | [Container.PlexContent(Episodes) + !IsEmpty(Container.Property(primaryFilterActivated)) + IsEmpty(Container.Property(PlexPreplay))]] + ![Container.PlexContent(Channel) + [ListItem.Type(clip) | ListItem.Type(episode) | ListItem.Type(song)]]</visible>
 				</control>
-				<!-- Play All -->
+				 Play All
 				<control type="button" id="104">
 					<texturefocus>b-pp-play-s2.png</texturefocus>
 					<texturenofocus>b-pp-play2.png</texturenofocus>
@@ -560,7 +554,7 @@
 					<include>leftMenuBarButton</include>
 					<visible>![Window.IsActive(501) + Container.PlexFilter(recentlyAdded)] + !Container.PlexFilter(recentlyViewedShows)</visible>
 				</control>
-				<!-- Now Playing -->
+				 Now Playing
 				<control type="button" id="106">
 					<texturefocus>-</texturefocus>
 					<texturenofocus>-</texturenofocus>
@@ -572,18 +566,18 @@
 			<!-- sidebar preplay -->
 			<control type="grouplist" id="998">
 				<visible>[Container.PlexContent(Movie) | Container.PlexContent(Episode) | Container.PlexContent(Clip)] | [Container.PlexContent(Channel) + !IsEmpty(Container.Property(PlexPreplay))]</visible>
-				<posy>40</posy>
-				<posx>0</posx>
-				<width>74</width>
+				<posy>52</posy>
+				<posx>39</posx>
+				<width>150</width>
 				<aligny>top</aligny>
 				<onup>998</onup>
 				<ondown>998</ondown>
 				<orientation>vertical</orientation>
-				<itemgap>20</itemgap>
+				<itemgap>46</itemgap>
 				<!-- Play -->
 				<control type="button" id="102">
-					<texturefocus>b-pp-play-s.png</texturefocus>
-					<texturenofocus>b-pp-play.png</texturenofocus>
+					<texturefocus>b-pp-play-s2.png</texturefocus>
+					<texturenofocus>b-pp-play2.png</texturenofocus>
 					<onright>XBMC.NextItem</onright>
 					<onleft>XBMC.PrevItem</onleft>
 					<onclick>Plex.PlayWith(VideoDefaultPlayer)</onclick>
@@ -611,16 +605,6 @@
 					<onfocus>Skin.SetString(DialogPos,subtitlestreampicker)</onfocus>
 					<onunfocus>Skin.Reset(DialogPos)</onunfocus>
 				</control>
-				<!-- Extras -->
-				<control type="button" id="110">
-					<texturefocus>b-pp-extras-s.png</texturefocus>
-					<texturenofocus>b-pp-extras.png</texturenofocus>
-					<onright>XBMC.NextItem</onright>
-					<onleft>XBMC.PrevItem</onleft>
-					<onclick>SetFocus(3)</onclick>
-					<include>leftMenuBarButton</include>
-					<visible>!IsEmpty(ListItem.Property(PlexExtras))</visible>
-				</control>
 				<!-- Rate -->
 				<control type="button" id="105">
 					<texturefocus>b-pp-rate-s.png</texturefocus>
@@ -631,6 +615,16 @@
 					<include>leftMenuBarButton</include>
 					<onfocus>Skin.SetString(DialogPos,rate)</onfocus>
 					<onunfocus>Skin.Reset(DialogPos)</onunfocus>
+				</control>
+				<!-- Extras -->
+				<control type="button" id="110">
+					<texturefocus>b-pp-extras-s.png</texturefocus>
+					<texturenofocus>b-pp-extras.png</texturenofocus>
+					<onright>XBMC.NextItem</onright>
+					<onleft>XBMC.PrevItem</onleft>
+					<onclick>SetFocus(3)</onclick>
+					<include>leftMenuBarButton</include>
+					<visible>!IsEmpty(ListItem.Property(PlexExtras))</visible>
 				</control>
 				<!-- Recommend -->
 				<!--><control type="button" id="106">
@@ -683,10 +677,10 @@
 					<effect type="rotatey" center="-120" start="0" end="80" time="300"/>
 					<effect type="fade" start="100" end="0" time="250"/>
 				</animation>
-				<posx>-253</posx>
-				<posy>0</posy>
-				<width>253</width>
-				<height>730</height>
+				<posx>-410</posx>
+				<posy>46</posy>
+				<width>340</width>
+				<height>1000</height>
 				<ondown>1300</ondown>
 				<orientation>vertical</orientation>
 				<scrolltime>150</scrolltime>
@@ -695,12 +689,12 @@
 				<control type="label" id="19008">
 					<description>Title</description>
 					<posy>22</posy>
-					<posx>255</posx>
+					<posx>335</posx>
 					<include>leftMenuTitle</include>
 				</control>
 				<!-- primary filters list -->
 				<control type="grouplist" id="19000">
-					<posy>77</posy>
+					<posy>105</posy>
 					<posx>0</posx>
 					<onup>19010</onup>
 					<ondown>29999</ondown>
@@ -711,8 +705,8 @@
 				<!-- secondary filters list title -->
 				<control type="label" id="19009">
 					<description>Secondary Title</description>
-					<posy>263</posy>
-					<posx>255</posx>
+					<posy>338</posy>
+					<posx>335</posx>
 					<include>leftMenuTitle</include>
 					<label>FILTER</label>
 					<animation effect="slide" end="0,-107" time="0" condition="Skin.String(SectionType,movies) | Container.PlexContent(Movies)">Conditional</animation>
@@ -723,7 +717,7 @@
 				</control>
 				<!-- secondary filters list -->
 				<control type="grouplist" id="19001">
-					<posy>318</posy>
+					<posy>420</posy>
 					<posx>0</posx>
 					<onup>19000</onup>
 					<ondown>32000</ondown>
@@ -758,8 +752,8 @@
 				<!-- sorting list title -->
 				<control type="label" id="19019">
 					<description>Title</description>
-					<posy>502</posy>
-					<posx>255</posx>
+					<posy>689</posy>
+					<posx>335</posx>
 					<include>leftMenuTitle</include>
 					<label>SORT</label>
 					<animation effect="slide" end="0,-40" time="0" condition="[Skin.String(SectionType,movies) | Container.PlexContent(Movies)] + IsEmpty(Container.Property(secondaryFilterActivated))">Conditional</animation>
@@ -774,7 +768,7 @@
 				</control>
 				<!-- sorting list -->
 				<control type="grouplist" id="19010">
-					<posy>556</posy>
+					<posy>772</posy>
 					<posx>0</posx>
 					<onup>19001</onup>
 					<ondown>30000</ondown>

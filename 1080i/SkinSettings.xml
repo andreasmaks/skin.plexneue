@@ -137,7 +137,7 @@
 					<width>625</width>
 					<label>$LOCALIZE[32113]</label>
 					<onclick>Skin.ToggleSetting(ShowBigPostersLibraryView)</onclick>
-					<selected>Skin.HasSetting(ShowBigPostersLibraryView)</selected>
+					<selected>!Skin.HasSetting(ShowBigPostersLibraryView)</selected>
 				</control>
 				<control type="radiobutton" id="212">
 					<description>Hide plot for Unwatched/In Progress</description>

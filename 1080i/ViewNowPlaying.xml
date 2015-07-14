@@ -536,7 +536,7 @@
 		<control type="image">
 			<posy>-22</posy>
 			<posx>0</posx>
-			<width>1280</width>
+			<width>1920</width>
 			<height>742</height>
 			<texture>plex.png</texture>
 			<aspectratio>keep</aspectratio>
@@ -545,7 +545,7 @@
 		</control>
 		<!-- Fanart grainy overlay -->
 		<control type="image">
-			<width>1280</width>
+			<width>1920</width>
 			<height>720</height>
 			<texture>bg-overlay-grainy.png</texture>
 			<aspectratio>stretch</aspectratio>

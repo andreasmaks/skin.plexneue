@@ -11,7 +11,7 @@
 				<description>bg</description>
 				<posx>0</posx>
 				<posy>-250</posy>
-				<width>1280</width>
+				<width>1920</width>
 				<height>420</height>
 				<texture>black.png</texture>
 			</control>

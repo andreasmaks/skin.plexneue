@@ -4,7 +4,7 @@
 	<include name="PqPlMainBG">
 		<control type="largeimage">
 			<include>FullScreenScaled</include>
-			<texture background="true">$INFO[ListItem.CompositeImage(width=1280;height=720;cols=3;rows=2)]</texture>
+			<texture background="true">$INFO[ListItem.CompositeImage(width=1920;height=720;cols=3;rows=2)]</texture>
 		</control>
 		<include>BGOverlay</include>
 		<control type="group">
