@@ -5,7 +5,7 @@ This is a first alpha release. Many things haven't been styled yet.
 Feel free!
 
 
-###For testing just put the skin.plexneue Folder here.
+####For testing just put the skin.plexneue Folder here.
 
 **Windows:** Copy folder to c:\Users\your_user_name\AppData\Roaming\Plex Home Theater\addons
 
